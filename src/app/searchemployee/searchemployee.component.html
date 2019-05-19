@@ -1,0 +1,12 @@
+<div class="input-group">
+    <input #search placeholder="Enter EMPCode" class="form-control">
+    <button (click)="searchEmployee(search.value)" class="btn btn-danger">Go</button>
+</div>
+
+<table class="table table-hover">
+    <tr *ngIf="searchedEmployee!=null">
+      <td >{{searchedEmployee.EMPCode}}-{{searchedEmployee.FullName}}</td>
+      <td >{{searchedEmployee.Position}}</td>
+      <td >{{searchedEmployee.Mobile}}</td>
+    </tr>
+  </table>
